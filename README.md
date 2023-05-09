@@ -1,6 +1,6 @@
 # SuperMarket_Project
 
-### Manage SuperMarket that help customer , employee , control of products and save data to all of them in files to use it later by programming language ( ***Python*** , ***C++***)   
+#### Manage SuperMarket that help customer , employee , control of products and save data to all of them in files to use it later by programming language ( ***Python*** , ***C++***)   
   
 
 <br><br>
