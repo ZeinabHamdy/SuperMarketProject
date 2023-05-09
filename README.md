@@ -1,4 +1,4 @@
 # SuperMarketProject
-manage super_market system using files to save data
+Manage super_market system using files to save data
 
 
