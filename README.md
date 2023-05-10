@@ -1,9 +1,10 @@
 # SuperMarket_Project <br>
 Manage SuperMarket that help customer , employee , control of products and save data to all of them in files to use it later 
-
-## programming language 
+<br>
+<br>
+## Programming languages :
 * [Python](https://github.com/ZeinabHamdy/SuperMarketProject/tree/main/Python)
-* [C++]
+* [C++](https://github.com/ZeinabHamdy/SuperMarketProject/tree/main/C%2B%2B)
 
 <br>
 
