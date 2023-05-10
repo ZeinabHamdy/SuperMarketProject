@@ -1,4 +1,3 @@
-
 def writeEmployee():  
     with open('Employee.txt','a') as file :
         c = 'y'
@@ -151,7 +150,7 @@ def deleteProduct():
 
 def updateprice(EmployeeID):
     import os
-    ID=input('Enter the ID of the product you want to update this price: ')
+    ID=input('Enter the ID of the product that you want to update it\'s price: ')
     flag=False
     file=open("Product.txt","r")
     tempfile=open("TempProduct.txt","w")
