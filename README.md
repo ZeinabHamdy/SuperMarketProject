@@ -24,7 +24,7 @@ Manage SuperMarket that help customer , employee , control of products and save 
             <td><h4><a href="https://github.com/ZeinabHamdy">Zeinab Hamdy</a><br><br></h4></td>
             <td><h4><a href="https://github.com/RofydaElghadban">Rofyda Elghadban</a><br><br></h4></td>
             <td><h4><a href="https://github.com/">Baisan Mohamed</a><br><br></h4></td>
-            <td><h4><a href="https://github.com/">Shaimaa Elmansoury</a><br><br></h4></td>
+            <td><h4><a href="https://github.com/shaimaaElmansoury">Shaimaa Elmansoury</a><br><br></h4></td>
         </tr>
 
 </table>
