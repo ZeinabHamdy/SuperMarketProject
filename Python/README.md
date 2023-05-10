@@ -18,5 +18,5 @@
 ### ```Available options : ``` 
 * Log in to system.
 * Can search about any product to know all details.
-* Read menu to buy any product by select it's id then add the products that the customer buy it to another file "Sales.txt"
+* Read menu to buy any product by select it's id then add the products that the customer bought it to another file "Sales.txt"
 to show the sales , their prices and total price ```if a customer visited the system more than once then there exist discount by 5% from total``` .
