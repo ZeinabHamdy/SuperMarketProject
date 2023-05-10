@@ -5,7 +5,7 @@
  The employee enter his data and check the validate of ```id``` and  ```username``` to become unique data.
  <br><br>
  * Old user ( Log in ) : <br>
- The employee enter his data and heck if that data is already exist in the system ```can't be enter that employee without making sure that data is correct```.
+ The employee enter his data and check if that data is already exist in the system ```can't be enter that employee without making sure that data is correct```.
 
 ### ```Available options : ``` 
 * Add new products.
@@ -15,10 +15,11 @@
 * Delete any product by id.
 * Know all Employees ( without knowing their correct passwords ).
 
-
-
-
-
-
-
 ## 2. Customer
+
+* New user ( Sign up ) : <br>
+ The customer enter his data and check the validate of ```id``` and  ```username``` to become unique data.
+ <br><br>
+ * Old user ( Log in ) : <br>
+ The customer enter his data and check if that data is already exist in the system ```can't be enter that customer without making sure that data is correct```.
+
