@@ -14,6 +14,9 @@
 * Update at price of product by it's id and edit employee_id.
 * Add new product and it's employee_id that put it.
 
-
-
 ## 2. Customer
+### ```Available options : ``` 
+* Log in to system.
+* Can search about any product to know all details.
+* Read menu to buy any product by select it's id then add the products that the customer buy it to another file "Sales.txt"
+to show the sales , their prices and total price ```if a customer visited the system more than once then there exist discount by 5% from total``` .
