@@ -23,3 +23,7 @@
  * Old user ( Log in ) : <br>
  The customer enter his data and check if that data is already exist in the system ```can't be enter that customer without making sure that data is correct```.
 
+### ```Available options : ``` 
+* Know all Customers ( without knowing their correct passwords ).
+* Read all product to buy any product by enter it's id.
+* Finally get the data that the customer bought it by file "Sales.txt" and show the total price.
