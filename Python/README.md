@@ -1,5 +1,4 @@
 
-> # [Video](https://drive.google.com/file/d/1QnErsBiYMq8CPFHXxJI0wzPmoHQYvBDl/view?usp=share_link)
 # Our system help Employee and Customer :
 
 ## 1. Employee
@@ -23,4 +22,8 @@
 * Can search about any product to know all details.
 * Read menu to buy any product by select it's id and enter the quantity of this product then add the products that the customer bought it to another file "Sales.txt"
 to show the sales , their prices and total price ```if a customer visited the system more than once then there exist discount by 5% from total``` .
+
+
+
+https://github.com/ZeinabHamdy/SuperMarketProject/assets/112763558/0f2e04b5-1824-49fa-a453-83161388c9cd
 
