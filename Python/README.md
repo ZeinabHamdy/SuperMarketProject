@@ -1,3 +1,5 @@
+
+> # [Video](https://drive.google.com/file/d/1QnErsBiYMq8CPFHXxJI0wzPmoHQYvBDl/view?usp=share_link)
 # Our system help Employee and Customer :
 
 ## 1. Employee
