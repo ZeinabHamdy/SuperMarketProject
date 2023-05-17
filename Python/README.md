@@ -23,3 +23,4 @@
 * Can search about any product to know all details.
 * Read menu to buy any product by select it's id and enter the quantity of this product then add the products that the customer bought it to another file "Sales.txt"
 to show the sales , their prices and total price ```if a customer visited the system more than once then there exist discount by 5% from total``` .
+
