@@ -6,36 +6,36 @@ def writeEmployee():
             Name=input('Enter name : ')
             file.write(Id+'\t'+Name+'\n')
             c=input('Do you want to enter records again ? (y or n) ')
-
-
-
+ 
+ 
+ 
 #*******************************************************************************#*******************************************************************************#
-
+ 
             
             
 def readEmployee():
     with open('Employee.txt','r') as file :
         print('ID\tName')
-        print('---------------')
+        print('------------------------')
         for line in file:
             print(line, end='')
-
-
-
+ 
+ 
+ 
 #*******************************************************************************#*******************************************************************************#
-
-
-
+ 
+ 
+ 
 def writeCustomer():
     with open('Customer.txt','a') as file :
         Name=input('Enter your  name : ')
         Phone=input('Enter your phone number : ')
         file.write(Name+'\t'+Phone+'\n')
-
-
-
+ 
+ 
+ 
 #*******************************************************************************#*******************************************************************************#
-
+ 
         
         
 def readCustomer():
@@ -44,11 +44,11 @@ def readCustomer():
         print('--------------------------')
         for line in file:
             print(line, end='')
-
-
-
+ 
+ 
+ 
 #*******************************************************************************#*******************************************************************************#
-
+ 
             
             
 def writeProduct(Employee_ID):
@@ -61,11 +61,11 @@ def writeProduct(Employee_ID):
             file.write(ID+'\t'+Name+'\t'+Price+'\t'+Employee_ID+'\n')
             c=input('Enter records of product again (y/n)? ')
             
-
+ 
             
 #*******************************************************************************#*******************************************************************************#
-
-
+ 
+ 
             
 def readProduct(): # with employeeId
     with open('Product.txt', 'r')as file:
@@ -73,13 +73,13 @@ def readProduct(): # with employeeId
         print('-----------------------------------')
         for line in file:
             print(line , end='')
-
+ 
             
  
 #*******************************************************************************#*******************************************************************************#
-
-
-
+ 
+ 
+ 
 def readProduct2(): # without employeeId
     with open('Product.txt', 'r')as file:
         print('ID\tName\tPrice')
@@ -87,17 +87,17 @@ def readProduct2(): # without employeeId
         for line in file:
              l=line.split('\t')
              print(l[0] + '\t' + l[1] + '\t' + l[2])
-
-
+ 
+ 
             
-
-
-
-
+ 
+ 
+ 
+ 
 #*******************************************************************************#*******************************************************************************#
-
-
-
+ 
+ 
+ 
             
 def searchProduct():
     Name=input('Enter the name for the product to search: ')
@@ -110,14 +110,14 @@ def searchProduct():
                 print('ID:',pr[0],'\tName:',pr[1],'\tPrice:',pr[2])
         if not found:
             print('\n"Sorry, The product is not found!"\n')
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 #*******************************************************************************#*******************************************************************************#
-
-
+ 
+ 
         
  
 def deleteProduct():
@@ -140,17 +140,17 @@ def deleteProduct():
         print('\n"Product record deleted successfuly"\n')
     else :
         print('\n"Sorry, The product is not found!"\n')
-
-
-
-
+ 
+ 
+ 
+ 
 #*******************************************************************************#*******************************************************************************#
-
-
-
+ 
+ 
+ 
 def updateprice(EmployeeID):
     import os
-    ID=input('Enter the ID of the product that you want to update it\'s price: ')
+    ID=input('Enter the ID of the product you want to update this price: ')
     flag=False
     file=open("Product.txt","r")
     tempfile=open("TempProduct.txt","w")
@@ -170,18 +170,18 @@ def updateprice(EmployeeID):
        print("The employee_ID is sucessfully updated\n")
     else :
         print("No price_id matched to update!")
-
-
-
-
+ 
+ 
+ 
+ 
         
-
+ 
 #*******************************************************************************#*******************************************************************************#
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 def countCustomer(Phone):
     with open('Customer.txt','r') as file :
         counter=0
@@ -191,6 +191,25 @@ def countCustomer(Phone):
             if Phone==cc[1]:
                 counter+=1
     return counter
+ 
+ 
+ 
+ 
+ 
+#*******************************************************************************#*******************************************************************************#
+ 
+ 
+
+
+def validLogIn( ID  , name ):
+    with open('Employee.txt', 'r') as file:
+        for line in file:
+            temp=line.strip()
+            l=temp.split('\t')
+            if l[0]==ID and l[1]==name :
+               return True;
+        
+        return False;
 
 
 
@@ -201,6 +220,24 @@ def countCustomer(Phone):
 
 
 
+
+def validPhone( phone ):
+    valid=False;
+    for i in phone :
+        if i>='0' and  i<='9':
+            continue
+        else :
+            return False
+        
+    return True
+
+
+#*******************************************************************************#*******************************************************************************#
+
+
+
+
+ 
 def menuEmpolyee(Id , Name) :
     ch='Y'
     while ch=='Y' or ch=='y' :
@@ -215,7 +252,7 @@ def menuEmpolyee(Id , Name) :
         print('7) Add new product.')
         print('\n\"press any key to exit\"')
         op=int(input('\n\nEnter your choice : \n'))
-
+ 
         
         if  op== 1 :
             writeEmployee()
@@ -233,19 +270,19 @@ def menuEmpolyee(Id , Name) :
             writeProduct(Id)
         else :
             return
-
+ 
         ch=input('\nIf you want to continue press [ Y / N ] : ')
-
+ 
         
         
-
-
+ 
+ 
 #*******************************************************************************#*******************************************************************************#
-
+ 
         
-
-
-
+ 
+ 
+ 
 def  menuCustomer(Name , Phone):
      ch='Y' ; totalPrice =0;
      count_visited = countCustomer(Phone)
@@ -258,19 +295,20 @@ def  menuCustomer(Name , Phone):
                print(' *if you want to buy any product please call \'Know all products\'.')
                print(' *if you want to exit press any key.')
                opt= int(input('\n\nEnter your choice : \t\n'))
-
+ 
                
                if opt== 1:
                    readProduct2()
-                   wantedID=input('\nEnter id of the needed product : ')   
+                   wantedID=input('\nEnter id of the needed product : ')
+                   quantity=input('Enter the quantity you need of the product : ')
                    with open("Product.txt" ,'r' ) as file :
                         for line in file :
-                            L = line.split('\t')
-                            if wantedID== L[0] :
-                                sale.write(line)
-                                totalPrice+=int(L[2])
+                            l = line.split('\t')
+                            if wantedID== l[0] :
+                                sale.write(l[0] +'\t' + l[1] + '\t' + l[2] + '\t' +quantity +'\n')
+                                totalPrice+=int(l[2])*int(quantity)
                                 break
-
+ 
            
                elif opt == 2 :
                     searchProduct()
@@ -278,37 +316,39 @@ def  menuCustomer(Name , Phone):
                else :
                     break
                ch= input('\nIf you want to continue press [ Y / N ] : ')
-
-
-
+ 
+ 
+ 
           # the customer buy products
      if totalPrice!=0 :
-         print('\n\n=================================   Data of your sales : id &  name &  price   ================================= \n')
+         print('\n\n**********************************************  Receipt  **********************************************\n')
+         print('Id\tName\tPrice\tQuantity')
          with open("Sales.txt" ,'r' ) as sale:
                  for line in sale :
-                     l=line.split('\t')
-                     print(l[0] + '\t' + l[1] + '\t' + l[2] )
-
+                     l = line.split('\t')
+                     print(l[0] +'\t' + l[1] + '\t' + l[2] + '\t' +l[3] , end='' )
+ 
              
-         print('\nYour total price : ' , totalPrice)
+         print('\n\nTotal price : ' , totalPrice)
          if(count_visited > 1) :
-             print('You visited our system ' , count_visited , ' times')
-             print('Your total price after discount  : ', totalPrice - (totalPrice * 5 //100 ) )
-
-
+             print('Number of visited our system : ', count_visited ,' times')
+             print('Discount : ' , (totalPrice * 5 //100 ) )
+             print('Total price after discount  : ', totalPrice - (totalPrice * 5 //100 ) )
+ 
+ 
      print('\n\n***********************************   thanks for using our system   ***********************************')
-
-
-
-
+ 
+ 
+ 
+ 
        
 #*******************************************************************************#*******************************************************************************#
-
+ 
      
-
+ 
      
 def Main():
-
+ 
     passWord='File'
     
     op1 = int(input('1) Employee.\n2) Customer.\nEnter Your choice : '))
@@ -326,17 +366,23 @@ def Main():
         
         print('\n*************  Welcome  *************\n')
         
-        with open('Employee.txt','a') as file :
+        Id=input('Enter your id : ')
+        Name=input('Enter your  name : ')
+
+
+        # validate of id , name
+        while not validLogIn(Id , Name):
+                print('Invalid log in! , please try again')
+                Id=input('Enter your id : ')
+                Name=input('Enter your  name : ')   
+                
             
-            Id=input('Enter your id : ')
-            Name=input('Enter your  name : ')
-            file.write(Id+'\t'+Name+'\n')   # suppose that they always true
             
-        print('\n************* logged in *************\n')
+        print('\n******* logged in Successfully *******\n')
         
         menuEmpolyee(Id , Name)
-
-
+ 
+ 
         
     elif op1==2 : # Customer
         
@@ -344,15 +390,20 @@ def Main():
            
         Name=input('Enter your  name : ')
         Phone=input('Enter your phone number : ')
+        
+        while not validPhone(Phone) :
+            print('Invalid Phone! , please try again')
+            Phone=input('Enter your phone number : ')
+            
         File.write(Name+'\t'+Phone+'\n')
         
         menuCustomer(Name , Phone)
-
-
-
+ 
+ 
+ 
         
     else :
         return 
-
-
+ 
+ 
 Main()
