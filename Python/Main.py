@@ -199,8 +199,8 @@ def countCustomer(Phone):
 #*******************************************************************************#*******************************************************************************#
  
  
-
-
+ 
+ 
 def validLogIn( ID  , name ):
     with open('Employee.txt', 'r') as file:
         for line in file:
@@ -210,17 +210,17 @@ def validLogIn( ID  , name ):
                return True;
         
         return False;
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 #*******************************************************************************#*******************************************************************************#
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 def validPhone( phone ):
     valid=False;
     for i in phone :
@@ -230,13 +230,13 @@ def validPhone( phone ):
             return False
         
     return True
-
-
+ 
+ 
 #*******************************************************************************#*******************************************************************************#
-
-
-
-
+ 
+ 
+ 
+ 
  
 def menuEmpolyee(Id , Name) :
     ch='Y'
@@ -329,11 +329,11 @@ def  menuCustomer(Name , Phone):
                      print(l[0] +'\t' + l[1] + '\t' + l[2] + '\t' +l[3] , end='' )
  
              
-         print('\n\nTotal price : ' , totalPrice)
+         print('\n\nTotal price : ' , totalPrice ,' pounds ')
          if(count_visited > 1) :
              print('Number of visited our system : ', count_visited ,' times')
-             print('Discount : ' , (totalPrice * 5 //100 ) )
-             print('Total price after discount  : ', totalPrice - (totalPrice * 5 //100 ) )
+             print('Discount : ' , (totalPrice * 5 //100 ) ,' pounds ' )
+             print('Total price after discount  : ', totalPrice - (totalPrice * 5 //100 ) ,' pounds ')
  
  
      print('\n\n***********************************   thanks for using our system   ***********************************')
@@ -368,8 +368,8 @@ def Main():
         
         Id=input('Enter your id : ')
         Name=input('Enter your  name : ')
-
-
+ 
+ 
         # validate of id , name
         while not validLogIn(Id , Name):
                 print('Invalid log in! , please try again')
